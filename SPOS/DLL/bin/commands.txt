@@ -1,0 +1,6 @@
+javac B1.java
+javah -classpath.B1
+ls
+gcc -shared fPIC -I/(path of jvm/include folder) -I/(include/Linux folder) B1.c -o libB1.so (.dll for windows)
+ls
+java -classpath .-Djava.library.path=.B1
