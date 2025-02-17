@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Examples</title>
+    <script type="text/javascript">
+        function headScript(){
+            alert("Head Script")
+        };
+    </script>
+</head>
+<body>
+    <h1>Javascript containers</h1>
+    <p>Here we will use VAR, LET and CONST</p>
+    <script>
+        var a = 10;
+        let b = 20;
+        const c = 30;
+        document.write("Var value: "+a+"<br>Let value: "+b+"<br>Constant value: "+c)
+    </script>
+    <br>
+    <script src="script.js"></script>
+    <h1>Embedded Js into HTML</h1>
+    <input type="button" value="Say Hello World!" onclick="sayHello()">
+    <br><br>
+    <h1>Head Script</h1>
+    <input type="button" value="Head Script!" onclick="headScript()">
+    <br>
+    <h1>Body Script with Arithmetic operations</h1>
+    <script>
+        function bodyScript(){
+            var sum = a + b;
+            var sub = a - b;
+            var multi = a * b;
+            var div = a / b;
+            document.getElementById("arithmetic").innerHTML = 
+                "Addition is: " + sum + "<br>" +
+                "Subtraction is: " + sub + "<br>" +
+                "Multiplication is: " + multi + "<br>" +
+                "Division is: " + div;
+            }
+    </script>
+    <div id="arithmetic"></div>
+    <input type="button" value="Arithmetic" onclick="bodyScript()">
+    <br>
+    <h1>Event</h1>
+    <input type="button" value="Event Click" onclick="alert('Event Check')">
+</body>
+</html>
